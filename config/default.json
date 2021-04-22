@@ -1,0 +1,3 @@
+{
+    "mongoURI": "mongodb://dbGrace:dbGrace@contactkeep-shard-00-00.puc4h.mongodb.net:27017,contactkeep-shard-00-01.puc4h.mongodb.net:27017,contactkeep-shard-00-02.puc4h.mongodb.net:27017/test?ssl=true&replicaSet=atlas-12tp8y-shard-0&authSource=admin&retryWrites=true&w=majority"
+}
