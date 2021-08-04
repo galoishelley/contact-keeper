@@ -15,7 +15,9 @@ const Contacts = () => {
     if (contacts.length === 0) {
         return <h4>Please add a contact</h4>
     }
-
+    console.log("000000000000000begin");
+    console.log(contacts);
+    console.log("000000000000000end");
     return (
         <div>
             <Fragment>

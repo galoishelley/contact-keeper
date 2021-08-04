@@ -24,20 +24,26 @@ const AuthState = props => {
     const [state, dispatch] = useReducer(authReducer, initialState);
 
     //Load User
-    const loadUser = () => async () => {
+    const loadUser = async () => {
         // @todo -- load token into globak headers
 
         if (localStorage.token) {
             setAuthToken(localStorage.token);
         }
 
+        console.log("====1,5=== begin");
         try {
             const res = await axios.get('/api/auth');
+
+            console.log("====2=== begin");
+            console.log(res.data);
+            console.log("====2=== end");
 
             dispatch({ type: USER_LOADED, payload: res.data });
         } catch (err) {
             dispatch({ type: AUTH_ERROR });
         }
+        console.log("====1,5=== end");
     }
 
     //Register User
@@ -55,7 +61,13 @@ const AuthState = props => {
                 payload: res.data
             });
 
+            console.log("====1=== begin");
+            console.log(res.data);
+            console.log("====1=== end");
+
+            console.log("====3=== begin");
             loadUser();
+            console.log("====3=== end");
         } catch (err) {
             dispatch({
                 type: REGISTER_FAIL,
