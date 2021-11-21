@@ -417,6 +417,10 @@ table th {
   transition: opacity 1000ms ease-in;
 }
 
+.info a{
+  color: gray;
+}
+
 
 /* Mobile Styles */
 @media (max-width: 700px) {
